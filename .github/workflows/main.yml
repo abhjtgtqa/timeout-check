@@ -13,6 +13,7 @@ jobs:
         timeout-minutes: 1
         run: |
           echo "Starting..."
+          chmod +x script.sh
           ls -lrt 
           echo "$SHELL `whoami`"
           ./script.sh
