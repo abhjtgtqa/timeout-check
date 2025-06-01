@@ -19,5 +19,7 @@ jobs:
           echo "$SHELL `whoami`"
           ./script.sh
           echo RC: $?
+      - name: check RC
+        run: "echo RC: $?"
       - name: last step
         run: echo "Ending..."
