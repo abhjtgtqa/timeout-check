@@ -10,8 +10,11 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4.2.2
       - name: run script
+        timeout-minutes: 1
         run: |
           echo "Starting..."
           ls -lrt 
+          echo "$SHELL `whoami`"
+          ./script.sh
       - name: last step
         run: echo "Ending..."
