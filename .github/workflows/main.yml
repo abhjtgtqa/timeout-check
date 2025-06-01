@@ -1,0 +1,13 @@
+name: workflow timeout check
+on:
+  push:
+    branches: "*"
+  workflow_run:
+jobs:
+  timeout:
+    runs-on: ubutnu-latest
+    steps:
+      - name: test
+        uses: actions/checkout@v4.2.2
+      - name: two
+        run: echo "Test"
