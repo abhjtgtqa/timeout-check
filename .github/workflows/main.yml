@@ -17,5 +17,6 @@ jobs:
           ls -lrt 
           echo "$SHELL `whoami`"
           ./script.sh
+          echo RC: $?
       - name: last step
         run: echo "Ending..."
