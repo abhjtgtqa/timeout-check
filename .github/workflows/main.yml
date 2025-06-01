@@ -2,7 +2,7 @@ name: workflow timeout check
 on:
   push:
     branches: "*"
-  workflow_run:
+  workflow_dispatch:
 jobs:
   timeout:
     runs-on: ubutnu-latest
