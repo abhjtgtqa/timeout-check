@@ -7,7 +7,11 @@ jobs:
   timeout:
     runs-on: ubuntu-latest
     steps:
-      - name: test
+      - name: checkout repo
         uses: actions/checkout@v4.2.2
-      - name: two
-        run: echo "Test"
+      - name: run script
+        run: |
+          echo "Starting..."
+          ls -lrt 
+      - name: last step
+        run: echo "Ending..."
