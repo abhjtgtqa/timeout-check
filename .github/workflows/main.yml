@@ -10,7 +10,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4.2.2
       - name: run script
-        timeout-minutes: 1
+        timeout-minutes: 2
         continue-on-error: true
         run: |
           echo "Starting..."
