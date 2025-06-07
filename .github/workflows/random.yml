@@ -53,6 +53,11 @@ jobs:
           echo "/tmp/moidir/new.sh"
           echo "/tmp" >> $GITHUB_PATH
           echo $PATH
-          which new.sh || ls -lrt 
+          which new.sh
+      - name: check PATH
+        run: |
+          echo "Checking PATH..."
+          echo $PATH
+          which new.sh
       - name: last step
         run: echo "Ending..."
