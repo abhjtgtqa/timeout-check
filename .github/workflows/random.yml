@@ -38,7 +38,8 @@ jobs:
           echo ${{ github.run_number }}
           echo ${{ github.run_id }}
           echo ${{ github.run_attempt }}
-          echo ${{ github.env }}
-          echo {{ $RUNNER_ARCH }}
+          echo ${{ github.event }}
+          echo ${{ github.event_name }}
+          echo ${{ github.event_path }}
       - name: last step
         run: echo "Ending..."
