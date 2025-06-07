@@ -1,4 +1,4 @@
-name: workflow timeout check
+name: Testing workflow
 on:
   push:
     branches: "*"
@@ -19,7 +19,15 @@ jobs:
           echo "$SHELL `whoami`"
           # ./script.sh
           echo RC: $?
-      - name: check RC
-        run: "echo RC: $?"
+      - name: Tmp checks
+        run: |
+          echo "Checking..."
+          echo "SHELL: $SHELL"
+          echo "USER: `whoami`"
+          echo "PWD: `pwd`"
+          echo "HOME: $HOME"
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "$SHELL"
+          echo "$USER"
       - name: last step
         run: echo "Ending..."
