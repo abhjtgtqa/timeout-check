@@ -47,9 +47,9 @@ jobs:
           echo "Checking variables..."
           set -x
           echo "MOI: $MOI"
-          mkdir moidir
-          touch moidir/new.sh
-          echo "`pwd`/moidir/new.sh"
+          mkdir /tmp/moidir
+          touch /tmp/moidir/new.sh
+          echo "/tmp/moidir/new.sh"
           which new.sh || ls -lrt 
       - name: last step
         run: echo "Ending..."
