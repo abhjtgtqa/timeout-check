@@ -29,5 +29,7 @@ jobs:
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           echo "$SHELL"
           echo "$USER"
+          echo {{ $RUNNER_OS }}
+          echo {{ $RUNNER_ARCH }}
       - name: last step
         run: echo "Ending..."
