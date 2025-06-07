@@ -57,6 +57,7 @@ jobs:
       - name: check PATH
         run: |
           echo "Checking PATH..."
+          set -x
           echo $PATH
           which new.sh || echo "new.sh not found"
           ls -lrt /tmp/moidir/new.sh
