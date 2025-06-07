@@ -45,6 +45,7 @@ jobs:
       - name: Show variables
         run: |
           echo "Checking variables..."
+          set -x
           echo "MOI: $MOI"
           mkdir moidir
           touch moidir/new.sh
