@@ -1,0 +1,25 @@
+name: workflow timeout check
+on:
+  push:
+    branches: "*"
+  workflow_dispatch:
+jobs:
+  timeout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4.2.2
+      - name: run script
+        # timeout-minutes: 2
+        continue-on-error: true
+        run: |
+          echo "Starting..."
+          chmod +x script.sh
+          ls -lrt 
+          echo "$SHELL `whoami`"
+          # ./script.sh
+          echo RC: $?
+      - name: check RC
+        run: "echo RC: $?"
+      - name: last step
+        run: echo "Ending..."
