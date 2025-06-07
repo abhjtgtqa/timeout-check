@@ -49,6 +49,6 @@ jobs:
           mkdir moidir
           touch moidir/new.sh
           echo "`pwd`/moidir/new.sh"
-          which new.sh && True
+          which new.sh || True
       - name: last step
         run: echo "Ending..."
