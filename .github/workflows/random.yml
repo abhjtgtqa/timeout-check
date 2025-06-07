@@ -44,10 +44,11 @@ jobs:
           echo "MOI=DKR" >> $GITHUB_ENV
       - name: Show variables
         run: |
-          echo "CHecking variables..."
+          echo "Checking variables..."
           echo "MOI: $MOI"
-          mkdir subdir
-          touch subdir/new.sh
+          mkdir moidir
+          touch moidir/new.sh
+          echo "`pwd`/moidir/new.sh"
           which new.sh
       - name: last step
         run: echo "Ending..."
