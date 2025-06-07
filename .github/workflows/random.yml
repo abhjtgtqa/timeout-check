@@ -46,5 +46,8 @@ jobs:
         run: |
           echo "CHecking variables..."
           echo "MOI: $MOI"
+          mkdir subdir
+          touch subdir/new.sh
+          which new.sh
       - name: last step
         run: echo "Ending..."
