@@ -59,6 +59,6 @@ jobs:
           echo "Checking PATH..."
           echo $PATH
           which new.sh || echo "new.sh not found"
-          ls -lrt /tmp/moidir
+          ls -lrt /tmp/moidir/new.sh
       - name: last step
         run: echo "Ending..."
