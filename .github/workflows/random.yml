@@ -51,7 +51,7 @@ jobs:
           mkdir /tmp/moidir
           touch /tmp/moidir/new.sh
           echo "/tmp/moidir/new.sh"
-          echo "/tmp" >> $GITHUB_PATH
+          echo "/tmp/moidir" >> $GITHUB_PATH
           which new.sh || echo "new.sh not found"
           echo $PATH
       - name: check PATH
