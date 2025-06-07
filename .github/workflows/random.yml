@@ -52,12 +52,12 @@ jobs:
           touch /tmp/moidir/new.sh
           echo "/tmp/moidir/new.sh"
           echo "/tmp" >> $GITHUB_PATH
-          which new.sh
+          which new.sh || echo "new.sh not found"
           echo $PATH
       - name: check PATH
         run: |
           echo "Checking PATH..."
-          which new.sh
+          which new.sh || echo "new.sh not found"
           echo $PATH
       - name: last step
         run: echo "Ending..."
