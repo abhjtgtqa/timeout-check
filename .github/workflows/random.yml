@@ -47,9 +47,12 @@ jobs:
           echo "Checking variables..."
           set -x
           echo "MOI: $MOI"
+          echo $PATH
           mkdir /tmp/moidir
           touch /tmp/moidir/new.sh
           echo "/tmp/moidir/new.sh"
+          echo "/tmp" >> $GITHUB_PATH
+          echo $PATH
           which new.sh || ls -lrt 
       - name: last step
         run: echo "Ending..."
