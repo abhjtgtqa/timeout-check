@@ -29,7 +29,15 @@ jobs:
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           echo "$SHELL"
           echo "$USER"
-          echo {{ $GITHUB.WORKSPACE }}
+          echo ${{ github.action }}
+          echo ${{ github.actor }}
+          echo ${{ github.event_name }}
+          echo ${{ github.ref }}
+          echo ${{ github.ref_name }}
+          echo ${{ github.repositoryUrl }}
+          echo ${{ github.run_number }}
+          echo ${{ github.run_id }}
+          echo ${{ github.run_attempt }}
           echo {{ $RUNNER_ARCH }}
       - name: last step
         run: echo "Ending..."
